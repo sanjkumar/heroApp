@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>The Soccer Clubs</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
+  <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/prettyphoto.css" media="all" />
+
+
+  <script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
+  <script type="text/javascript" src="js/quicksand.js"></script>
+  <script type="text/javascript" src="js/portfolio.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+  <body>
+    <div id="container"> 
+      <!-- Begin Header Wrapper -->
+            <div id="page-top">
+        <div id="header-wrapper"> 
+          <!-- Begin Header -->
+          <div id="header">
+            <div id="logo"><a href="index.html"><img src="images/ball.jpg" alt="" /><h1>The Soccer Clubs</h1></a></div>
+            <!-- Logo --> 
+            <!-- Begin Menu -->
+            <div id="menu-wrapper">
+              <div id="smoothmenu1" class="ddsmoothmenu">
+                <ul>
+                  <li><a href="index.html" class="selected">Home</a></li>
+                  <li><a href="clubs.html">Clubs</a></li>
+                  <li><a href="players.html">Players</a>
+                    <ul>
+                      <li><a href="more-players.html">More Players</a></li>
+                    </ul>  
+                  </li>
+                  <li><a href="gallery.html" class="selected">Gallery</a>
+                    <ul>
+                      <li><a href="gallery.html">Slide with Lightbox</a></li>
+                      <li><a href="slide1.html">Slide with Details</a></li>
+                      <li><a href="slide2.html">Single Slide Post</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="news.html">News</a>
+                     <ul>
+                      <li><a href="news-single.html">News Post</a>
+                    </ul>  
+                  </li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="/posts">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Menu --> 
+        </div>
+        <!-- End Header --> 
+      </div>
+    </div>
+    <!-- End Header Wrapper --> 
+
+    <!-- Begin Wrapper -->
+ <div id="wrapper">
+    <div id="portfolio-single">
+      <div class="image"> <img src="images/manu_team1.jpg" alt="" /> <img src="images/realm_team-1.jpg" alt="" /> </div>
+      <div class="text">
+        <h3>English Premier League</h3>
+        <p>The Premier League is an English professional league for men's association football clubs. At the top of the English football league system, it is the country's primary football competition. Contested by 20 clubs, it operates on a system of promotion and relegation with the Football League. Besides English clubs, some of the Welsh clubs can also qualify to play, and participation by some Scottish or Irish clubs has also been mooted.</p>
+        <ul>
+          <li>One Champion</li>
+          <li>Total 20 teams</li>
+        </ul>
+        <a href="#">http://www.wikipedia.org</a>
+        <div class="divider3"></div>
+        <a href="#" class="p-project">&laquo; Previous Team</a> <a href="#" class="n-project">Next Team &raquo;</a>
+       </div>
+       <div class="text">
+        <h3>La Liga</h3>
+        <p>The Primera División[a] (First Division) of the Liga Nacional de Fútbol Profesional (LFP), commonly known in the English-speaking world as La Liga (/lə ˈliːɡə/, Spanish: [la ˈliɣa], The League), and officially named for sponsorship reasons Liga BBVA (BBVA League) is the top professional association football division of the Spanish football league system. It is contested by 20 teams</p>
+        <ul>
+          <li>One Champion</li>
+          <li>Total 20 teams</li>
+        </ul>
+        <a href="#">http://www.wikipedia.org</a>
+        <div class="divider3"></div>
+        <a href="#" class="p-project">&laquo; Previous Team</a> <a href="#" class="n-project">Next Team &raquo;</a>
+       </div>
+    </div>
+  </div>
+  <!-- End Wrapper -->
+  <div class="clearfix"></div>
+  <div class="push"></div>
+</div>
+
+  <!-- Begin Footer -->
+  <div id="footer-wrapper">
+    <div id="footer">
+      <div id="footer-content"> 
+
+        <!-- Begin Copyright -->
+        <div id="copyright">
+          <p>© Copyright 2013 The Soccer Clubs | Sanjeev Kumar</p>
+        </div>
+        <!-- End Copyright --> 
+
+        <!-- Begin Social Icons -->
+        <div id="socials">
+          <ul>
+            <li><a href="#"><img src="images/images/icon-rss.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-twitter.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-dribble.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-tumblr.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-flickr.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-facebook.png" alt="" /></a></li>
+          </ul>
+        </div>
+        <!-- End Social Icons --> 
+
+      </div>
+    </div>
+  </div>
+
+  <!-- End Footer --> 
+  <script type="text/javascript">
+  $(document).ready(function(){
+   $("#gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'light_square',autoplay_slideshow: false});
+
+   $("ul.grid img").hide()
+   $("ul.grid img").each(function(i) {
+     $(this).delay(i * 200).fadeIn();
+   });
+
+ });
+  </script>
+
+</body>
+</html>

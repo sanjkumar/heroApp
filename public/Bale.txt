@@ -1,0 +1,1 @@
+Player name is <b>G</b>erth  <b>B</b>ale, and <b>C</b>lub <b>R</b>eal Madrid!

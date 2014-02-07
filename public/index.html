@@ -1,62 +1,196 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Heroku Test</title>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>The Soccer Clubs</title>
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.css"  />
+  <link rel="stylesheet" text="text/css" media="all" href="css/folk.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
 
-    <script type="text/javascript" scr="js/script.js"></script>
-    <link rel="stylesheet" text="text/css"  href="css/style.css" />
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+  <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+<script type="text/javascript">
+$(function() {
+  if ($('#sliderholder-cycle').length) {
+  // timeouts per slide (in seconds) 
+  var timeouts = [150,390,25]; 
+  function calculateTimeout(currElement, nextElement, opts, isForward) { 
+    var index = opts.currSlide; 
+    return timeouts[index] * 1000;
+  }
+  jQuery('#sliderholder-cycle').cycle({
+    fx: 'fade',
+    pager: '.slidernav',
+    prev:    '.sliderprev',
+    next:    '.slidernext',
+    speed: 1000,
+    timeoutFn: calculateTimeout,
+    pagerEvent: 'click',
+    pauseOnPagerHover: true,
+    cleartype: 1
+  });
+  jQuery('#sliderholder-cycle').css("display", "block");
+  jQuery('.slidernav').css("display", "block");
+  
+}
+}); 
+
+
+</script>
+
+</head>
+<body>
+  <div id="container"> 
+    <!-- Begin Header Wrapper -->
+      <div id="page-top">
+        <div id="header-wrapper"> 
+          <!-- Begin Header -->
+          <div id="header">
+            <div id="logo"><a href="index.html"><img src="images/ball.jpg" alt="" /><h1>The Soccer Clubs</h1></a></div>
+            <!-- Logo --> 
+            <!-- Begin Menu -->
+            <div id="menu-wrapper">
+              <div id="smoothmenu1" class="ddsmoothmenu">
+                <ul>
+                  <li><a href="index.html" class="selected">Home</a></li>
+                  <li><a href="clubs.html">Clubs</a></li>
+                  <li><a href="players.html">Players</a>
+                    <ul>
+                      <li><a href="more-players.html">More Players</a></li>
+                    </ul>  
+                  </li>
+                  <li><a href="gallery.html" class="selected">Gallery</a>
+                    <ul>
+                      <li><a href="gallery.html">Slide with Lightbox</a></li>
+                      <li><a href="slide1.html">Slide with Details</a></li>
+                      <li><a href="slide2.html">Single Slide Post</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="news.html">News</a>
+                     <ul>
+                      <li><a href="news-single.html">News Post</a>
+                    </ul>  
+                  </li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="/posts">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Menu --> 
+        </div>
+        <!-- End Header --> 
       </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
     </div>
+    <!-- End Header Wrapper --> 
+
+    <!-- Begin Slider -->
+    <div id="cycle-wrapper">
+      <div id="sliderholder-cycle"> 
+        <img src="images/manu_team.jpg" width="960" height="380" />
+        <div>      
+          <iframe src="http://www.youtube.com/embed/hqixLBU60b0" width="960" height="380"></iframe>
+        </div>
+        <img src="images/aresnal_team.jpg" width="960" height="380" /> 
+      </div>
+
+      <ul class="slidernav">
+      </ul>
+      <div class="sliderdir">
+        <a href="#"><span class="sliderprev">Prev</span></a><a href="#"><span class="slidernext">Next</span></a> 
+      </div>
+    </div>
+    <!-- End Slider --> 
+
+    <!-- Begin Wrapper -->
+    <div id="wrapper"> 
+
+      <!-- Begin Intro -->
+      <div class="intro">
+        <h1>Welcome to Football Transfer League, bringing you clubs football teams and players from the leagues. At Football Transfer League we collect the transfers and football rumours that the press and the rumour sites produce and distill them in order to extract interesting statistics. </h1>
+      </div>
+      <!-- End Intro --> 
+
+      <!-- Begin About -->
+      <div id="about">
+        <div class="one-fourth"> <a href="#"><img src="images/man_utd.jpg" alt="" /></a>
+          <h4>Mancherter Utd</h4>
+          <p>Mancherter Utd Football Club</p>
+        </div>
+        <div class="one-fourth"> <a href="#"><img src="images/chelsea.jpg" alt="" /></a>
+          <h4>Chelsea</h4>
+          <p>Chelsea Football Club</p>
+        </div>
+        <div class="one-fourth"> <a href="#"><img src="images/real_madrid.jpg" alt="" /></a>
+          <h4>Real Madrid</h4>
+          <p>Real Madrid Football Club</p>
+        </div>
+        <div class="one-fourth last"> <a href="#"><img src="images/barca.jpg" alt="" /></a>
+          <h4>Barcalona</h4>
+          <p>Barcalona Football Club</p>
+        </div>
+      </div>
+      <!-- End About --> 
+
+    </div>
+
+    <!-- End Wrapper -->
+    <div class="clearfix"></div>
+    <div class="push"></div>
+  </div>
+
+  <!-- Begin Footer -->
+  <div id="footer-wrapper">
+    <div id="footer">
+      <div id="footer-content"> 
+
+        <!-- Begin Copyright -->
+        <div id="copyright">
+          <p>© Copyright 2013 The Soccer Clubs | Sanjeev Kumar</p>
+        </div>
+        <!-- End Copyright --> 
+
+        <!-- Begin Social Icons -->
+        <div id="socials">
+          <ul>
+            <li><a href="#"><img src="images/images/icon-rss.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-twitter.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-dribble.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-tumblr.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-flickr.png" alt="" /></a></li>
+            <li><a href="#"><img src="images/images/icon-facebook.png" alt="" /></a></li>
+          </ul>
+        </div>
+        <!-- End Social Icons --> 
+
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <script type="text/javascript">
+    var displayResponse = function(response) {
+    $("#wrapper")
+      .html(response)
+      .find("a").on("click", loadAjax);
+  }
+
+  var loadAjax = function(e) {
+    e.preventDefault();
+    
+    var url = $(this).attr("href");
+    $.get(url, displayResponse);
+  }
+  
+  $("#ddsmoothmenu a").on("click", loadAjax);
+
+  </script>
+
   </body>
-</html>
+  </html>
